@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "4916b75f-9b0b-478c-86a8-15b08bcc46ef",
+		"name": "MasivCleanCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/roulette/close/101",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/roulette/close/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roulette",
+						"close",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/roulette",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"101\",\r\n    \"maxBet\": \"10000\",\r\n    \"state\": true,\r\n    \"bets\":[\r\n        {\r\n            \"number\": 1,\r\n            \"moneyBeated\": 1000,\r\n            \"color\": \"RED\"\r\n        },\r\n        {\r\n            \"number\": 2,\r\n            \"moneyBeated\": 1000,\r\n            \"color\": \"RED\"\r\n        }\r\n    ]\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/roulette",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roulette"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/roulette/open/101",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user",
+						"value": "pepito",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n        {\r\n            \"number\": 2,\r\n            \"moneyBeated\": 1000\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/roulette/open/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roulette",
+						"open",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/roulette",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"101\",\r\n    \"maxBet\": \"10000\",\r\n    \"state\": true,\r\n    \"bets\":[\r\n        {\r\n            \"number\": 1,\r\n            \"moneyBeated\": 1000,\r\n            \"color\": \"RED\"\r\n        }\r\n    ]\r\n        \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/roulette",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roulette"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
